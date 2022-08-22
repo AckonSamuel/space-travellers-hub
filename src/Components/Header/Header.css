@@ -1,14 +1,14 @@
 .logo {
-    width: 100px;
-    height: 100px;
-    margin-right: 20px;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
 }
 
 header {
-    display: flex;
+  display: flex;
 }
 
 .header_logo {
-    display: flex;
-    padding: 5% 10%;
+  display: flex;
+  padding: 5% 10%;
 }
