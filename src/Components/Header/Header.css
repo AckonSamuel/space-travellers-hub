@@ -6,9 +6,27 @@
 
 header {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .header_logo {
   display: flex;
-  padding: 5% 10%;
+  padding: 20px 0;
+}
+
+nav {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.active {
+  text-decoration: underline;
 }
