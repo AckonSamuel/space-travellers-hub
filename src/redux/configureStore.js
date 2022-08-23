@@ -5,3 +5,7 @@ import missionReducer from './missions/missions';
 const reducers = combineReducers({
     missionReducer,
 });
+
+const store = createStore(reducers, applyMiddleware(thunk));
+
+export default store;
