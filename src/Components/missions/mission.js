@@ -5,7 +5,7 @@ import './missions.css';
 
 const Mission = () =>{ 
   const missions = useSelector((state) => state.missioReducer, shallowEqual)
-  
+
   return (
   <section className="super-mission">
     <div className="header-container">
@@ -15,7 +15,12 @@ const Mission = () =>{
       <p className="join">Join</p>
     </div>
     <div className="mission-container>">
-      <MissionSkeleton />
+     { missions.map((mission) => (<MissionSkeleton
+      key={mission.id}
+      name={mission.name}
+      description={mission.description}
+      status={mission.reserved}
+      id={mission.id} />))}
     </div>
   </section>
 )};
