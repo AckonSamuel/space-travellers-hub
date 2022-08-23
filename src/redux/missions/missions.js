@@ -12,16 +12,16 @@ const missionReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'spacetravellers/missions/missions/fulfilled':
       return [...action.payload];
-    case 'spacetravellers/missions/joinMissions':
+    case JOIN_MISSIONS:
       return [
-        ...state.map((mission) => (mission.id !== action.payload
+        ...state.map((mission) => (mission.mission_id !== action.payload
           ? mission : { ...mission, reserved: true }))];
-    case 'spacetravellers/missions/leaveMissions':
+    case LEAVE_MISSIONS:
       return [
-        ...state.map((mission) => (mission.id !== action.payload
+        ...state.map((mission) => (mission.mission_id !== action.payload
           ? mission : { ...mission, reserved: false })),
       ];
-    case 'spacetravellers/mission/populateMissionsProfile':
+    case POPULATE_MISSIONS_PROFILE:
       return [...state];
     default:
       return state;
