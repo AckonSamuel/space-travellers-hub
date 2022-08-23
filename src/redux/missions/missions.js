@@ -30,26 +30,26 @@ const missionReducer = (state = initialState, action) => {
 };
 
 const LoadMissions = createAsyncThunk(
-    LOAD_MISSIONS,
-    async () => await axios.get(url),
+  LOAD_MISSIONS,
+  async () => await axios.get(url),
 );
 
 const JoinMissions = (id) => ({
-    type: JOIN_MISSIONS,
-    payload: id,
+  type: JOIN_MISSIONS,
+  payload: id,
 });
 
 const LeaveMission = (id) => ({
-    type: LEAVE_MISSIONS,
-    payload: id,
+  type: LEAVE_MISSIONS,
+  payload: id,
 });
 
 const PopulateMissionProfile = (id) => ({
-    type: POPULATE_MISSIONS_PROFILE,
-    payload: id,
+  type: POPULATE_MISSIONS_PROFILE,
+  payload: id,
 });
 
 export {
-    LoadMissions, JoinMissions, LeaveMission, PopulateMissionProfile,
+  LoadMissions, JoinMissions, LeaveMission, PopulateMissionProfile,
 };
 export default missionReducer;
