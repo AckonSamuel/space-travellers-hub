@@ -1,8 +1,12 @@
 import React from 'react';
+import { useSelector, shallowEqual } from 'react-redux';
 import MissionSkeleton from './MissionSkeleton';
 import './missions.css';
 
-const Mission = () => (
+const Mission = () =>{ 
+  const missions = useSelector((state) => state.missioReducer, shallowEqual)
+  
+  return (
   <section className="super-mission">
     <div className="header-container">
       <p>Mission</p>
@@ -14,6 +18,6 @@ const Mission = () => (
       <MissionSkeleton />
     </div>
   </section>
-);
+)};
 
 export default Mission;
