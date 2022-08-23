@@ -5,7 +5,7 @@ import './index.css';
 import App from './App';
 import store from './redux/configureStore';
 import reportWebVitals from './reportWebVitals';
-import store from './Components/rockets/configStore';
+// import store from './Components/rockets/configStore';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

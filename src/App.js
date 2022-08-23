@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Header from './Components/Header/Header';
 import Rockets from './Components/rockets/rockets';
-import Mission from './Components/missions/Mission';
+import Mission from './Components/missions/mission';
 import Dragon from './Components/dragons/dragons';
 import MyProfile from './Components/my_profile/my_profile';
 
