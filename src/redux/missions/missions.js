@@ -12,11 +12,11 @@ const missionReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'spacetravellers/missions/missions/fulfilled':
       return [...action.payload];
-    case 'spacetravellers/missions/joinMissions/fulfilled':
+    case 'spacetravellers/missions/joinMissions':
       return [
         ...state.map((mission) => (mission.id !== action.payload
           ? mission : { ...mission, reserved: true }))];
-    case 'spacetravellers/missions/leaveMissions/fulfilled':
+    case 'spacetravellers/missions/leaveMissions':
       return [
         ...state.map((mission) => (mission.id !== action.payload
           ? mission : { ...mission, reserved: false })),
@@ -30,7 +30,11 @@ const missionReducer = (state = initialState, action) => {
 
 const LoadMissions = createAsyncThunk(
   LOAD_MISSIONS,
-  async () => axios.get('https://api.spacexdata.com/v3/missions').then((res) => res.data),
+  async () => {
+    const res = await axios.get('https://api.spacexdata.com/v3/missions').then((res) => res.data);
+    const work = res.map((mission) => ({ ...mission, reserved: false }));
+    return work;
+  },
 );
 
 const JoinMissions = (id) => ({

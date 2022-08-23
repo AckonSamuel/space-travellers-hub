@@ -25,7 +25,7 @@ const MissionSkeleton = ({
               Not a member
             </p>
           </div>
-          <button type="button" id={id} onClick={missionParticipation()} className="mission-button leave"> Join mission</button>
+          <button type="button" id={id} onClick={missionParticipation} className="mission-button leave"> Join mission</button>
         </div>
       ) : (
         <div id={id} className="mission-table">
@@ -36,7 +36,7 @@ const MissionSkeleton = ({
           <p className="mission-status member">
             Active member
           </p>
-          <button type="button" id={id} onClick={missionParticipation()} className="mission-button leave"> Leave mission</button>
+          <button type="button" id={id} onClick={missionParticipation} className="mission-button leave"> Leave mission</button>
         </div>
       )}
     </>
@@ -47,7 +47,7 @@ MissionSkeleton.propTypes = {
   name: Proptypes.string.isRequired,
   description: Proptypes.string.isRequired,
   id: Proptypes.string.isRequired,
-  status: Proptypes.string.isRequired,
+  status: Proptypes.bool.isRequired,
 };
 
 export default MissionSkeleton;
