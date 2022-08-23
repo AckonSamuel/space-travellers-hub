@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchRockets } from '../../redux/rockets/actions_reducers';
+import { fetchRockets, bookRockets } from '../../redux/rockets/actions_reducers';
 import './rockets.css';
 
 const Rockets = () => {
@@ -11,6 +11,10 @@ const Rockets = () => {
     dispatch(fetchRockets);
   }, []);
 
+  const handleClick = (id) => {
+    dispatch(bookRockets(id));
+  };
+
   return (
     <section className="rockets">
       <ul className="rockets-list">
@@ -20,7 +24,7 @@ const Rockets = () => {
             <div className="rocket-details">
               <h3>{rocket.rocket_name}</h3>
               <p>{rocket.description}</p>
-              <button type="button" className="rocket-btn">Reservation</button>
+              <button type="button" className="rocket-btn" onClick={() => handleClick(rocket.id)}>Reservation</button>
             </div>
           </li>
         ))}
