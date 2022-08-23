@@ -1,4 +1,5 @@
 import React from 'react';
+import './missions.css';
 
 const MissionSkeleton = () => (
   <div className="mission-table">
