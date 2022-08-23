@@ -4,7 +4,7 @@ import MissionSkeleton from './MissionSkeleton';
 import './missions.css';
 
 const Mission = () =>{ 
-  const missions = useSelector((state) => state.missioReducer, shallowEqual)
+  const missions = useSelector((state) => state.missionReducer, shallowEqual)
 
   return (
   <section className="super-mission">
