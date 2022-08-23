@@ -3,6 +3,7 @@
   height: 250px;
   float: left;
   margin-right: 30px;
+  margin-bottom: 10px;
 }
 
 ul {
@@ -11,7 +12,6 @@ ul {
 
 li {
   padding: 30px;
-  gap: 30px;
 }
 
 .reserve {
