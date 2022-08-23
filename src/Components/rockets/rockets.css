@@ -39,6 +39,20 @@
   background-color: #6495ed;
 }
 
+.rocket-btn-close {
+  max-width: max-content;
+  padding: 5px 10px;
+  font-weight: 600;
+  border-radius: 4px;
+  font-size: 20px;
+  color: #6495ed;
+  background-color: #fff;
+}
+
 .rocket-details > p {
   line-height: 28px;
+}
+
+.hide {
+  display: none;
 }
