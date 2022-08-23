@@ -15,4 +15,11 @@ const MissionSkeleton = ({name, description, status, id}) => (
   </div>
 );
 
+MissionSkeleton.propTypes = {
+    name: Proptypes.string.isRequired,
+    description: Proptypes.string.isRequired,
+    status: Proptypes.bool.isRequired,
+    id: Proptypes.string.isRequired,
+}
+
 export default MissionSkeleton;
