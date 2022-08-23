@@ -1,7 +1,7 @@
 import React from 'react';
 import Proptypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { JoinMission, LeaveMission } from '../../redux/missions';
+import { JoinMissions, LeaveMission } from '../../redux/missions/missions';
 import './missions.css';
 
 const MissionSkeleton = ({
@@ -9,7 +9,8 @@ const MissionSkeleton = ({
 }) => {
   const dispatch = useDispatch();
 
-  const missionParticipation = () => (status === false ? dispatch(JoinMission(id)) : dispatch(LeaveMission(id)));
+  const missionParticipation = () => (status === false
+    ? dispatch(JoinMission(id)) : dispatch(LeaveMission(id)));
 
   return (
     <>
