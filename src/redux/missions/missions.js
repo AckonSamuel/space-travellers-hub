@@ -31,7 +31,7 @@ const missionReducer = (state = initialState, action) => {
 
 const LoadMissions = createAsyncThunk(
   LOAD_MISSIONS,
-  async () => await axios.get(url),
+  async () => await axios.get('https://api.spacexdata.com/v3/missions').then((res) => res.data),
 );
 
 const JoinMissions = (id) => ({

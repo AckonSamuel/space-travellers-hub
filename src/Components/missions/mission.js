@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { useSelector, shallowEqual } from 'react-redux';
 import MissionSkeleton from './MissionSkeleton';
+import { LoadMissions } from '../../redux/missions/missions';
 import './missions.css';
 
 const Mission = () =>{ 
   const missions = useSelector((state) => state.missionReducer, shallowEqual)
+  const dispatch = useDispatch();
+  useEffect(() => {
+    // if (document.querySelector('.mission-container').children.length === 0) 
+     dispatch(LoadMissions());
+  }, []);
 
   return (
   <section className="super-mission">
