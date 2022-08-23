@@ -6,11 +6,11 @@ const BabyDragon = ({
   name, type, description, image,
 }) => (
   <li>
-    <div>
+    <div className="image_container">
       <img src={image} alt={name} className="dragon_image" />
     </div>
-    <div>
-      <h3>{name}</h3>
+    <div className="description-container">
+      <h3 className="title">{name}</h3>
       <h5 className="type">
         (
         {type}

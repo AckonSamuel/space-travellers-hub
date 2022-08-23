@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux/es/exports';
-import { fetchDragons } from './redux/dragons.redux';
+import { fetchDragons } from '../../redux/dragons/dragons.redux';
 import BabyDragon from './BabyDragon';
 
 const Dragon = () => {
