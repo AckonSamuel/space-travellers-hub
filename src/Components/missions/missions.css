@@ -1,3 +1,4 @@
+/* mission files */
 * {
   margin: 0;
   padding: 0;
@@ -69,6 +70,7 @@
 .mission-status {
   background: #676666;
   color: white;
+  border-radius: 4px;
   width: 80%;
   margin: auto;
   padding: 0 0 2px 0;
