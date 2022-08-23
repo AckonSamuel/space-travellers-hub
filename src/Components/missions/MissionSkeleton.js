@@ -10,7 +10,7 @@ const MissionSkeleton = ({
   const dispatch = useDispatch();
 
   const missionParticipation = () => (status === false
-    ? dispatch(JoinMission(id)) : dispatch(LeaveMission(id)));
+    ? dispatch(JoinMissions(id)) : dispatch(LeaveMission(id)));
 
   return (
     <>
