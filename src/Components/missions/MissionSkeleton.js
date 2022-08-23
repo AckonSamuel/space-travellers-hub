@@ -2,7 +2,7 @@ import React from 'react';
 import Proptypes from 'prop-types';
 import './missions.css';
 
-const MissionSkeleton = ({name, description, id}) => (
+const MissionSkeleton = ({ name, description, id }) => (
   <div className="mission-table">
     <h2>{name}</h2>
     <p className="mission-description">
@@ -16,9 +16,9 @@ const MissionSkeleton = ({name, description, id}) => (
 );
 
 MissionSkeleton.propTypes = {
-    name: Proptypes.string.isRequired,
-    description: Proptypes.string.isRequired,
-    id: Proptypes.string.isRequired,
-}
+  name: Proptypes.string.isRequired,
+  description: Proptypes.string.isRequired,
+  id: Proptypes.string.isRequired,
+};
 
 export default MissionSkeleton;
