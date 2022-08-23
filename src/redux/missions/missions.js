@@ -7,6 +7,7 @@ const LEAVE_MISSIONS = 'spacetravellers/missions/leaveMissions';
 const POPULATE_MISSIONS_PROFILE = 'spacetravellers/mission/populateMissionsProfile';
 
 const initialState = [];
+const url = (id = '') => `https://api.spacexdata.com/v3/missions/${id}`;
 
 const missionReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -27,3 +28,8 @@ const missionReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+const LoadMissions = createAsyncThunk(
+    LOAD_MISSIONS,
+    async () => await axios.get(url),
+)
