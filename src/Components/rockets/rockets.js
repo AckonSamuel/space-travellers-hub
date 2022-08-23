@@ -31,7 +31,7 @@ const Rockets = () => {
               <button type="button" className={`rocket-btn ${rocket.reserved ? 'hide' : ''}`} onClick={() => handleBooking(rocket.id)}>
                 Reservation
               </button>
-              <button type="button" className={`rocket-btn-close ${rocket.reserved ? '' : 'hide'}`} onClick={() => handleCancellation(rocket.id)}>
+              <button type="button" className={`rocket-btn close ${rocket.reserved ? '' : 'hide'}`} onClick={() => handleCancellation(rocket.id)}>
                 Cancellation
               </button>
             </div>
