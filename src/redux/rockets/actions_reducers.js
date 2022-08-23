@@ -1,4 +1,5 @@
 const FETCH_ROCKETS = 'FETCH_ROCKETS';
+const RESERVATION = 'RESERVATION';
 const rocketApi = 'https://api.spacexdata.com/v3/rockets';
 
 const fetchRockets = async (dispatch) => {
@@ -10,11 +11,27 @@ const fetchRockets = async (dispatch) => {
   }
 };
 
+const bookRockets = (id) => ({
+  type: RESERVATION,
+  id,
+});
+
 const rocketReducer = (state = [], action) => {
-  if (action.type === FETCH_ROCKETS) {
-    return action.payload;
+  let newState;
+  switch (action.type) {
+    case FETCH_ROCKETS:
+      return action.payload;
+    case RESERVATION:
+      newState = state.map((rocket) => {
+        if (rocket.id === action.id) {
+          return { ...rocket, reserved: true };
+        }
+        return rocket;
+      });
+      return newState;
+    default:
+      return state;
   }
-  return state;
 };
 
-export { fetchRockets, rocketReducer };
+export { fetchRockets, rocketReducer, bookRockets };
