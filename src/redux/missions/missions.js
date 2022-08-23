@@ -43,3 +43,8 @@ const LeaveMission = (id) => ({
     type: LEAVE_MISSIONS,
     payload: id,
 });
+
+const PopulateMissionProfile = (id) => ({
+    type: POPULATE_MISSIONS_PROFILE,
+    payload: id,
+})
