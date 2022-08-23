@@ -1,8 +1,10 @@
 import React from 'react';
 import Proptypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { JoinMission, LeaveMission } from '../../redux/missions'
 import './missions.css';
 
-const MissionSkeleton = ({ name, description, id }) => (
+const MissionSkeleton = ({ name, description, id, status }) => {(
   <div className="mission-table">
     <h2>{name}</h2>
     <p className="mission-description">
@@ -13,7 +15,7 @@ const MissionSkeleton = ({ name, description, id }) => (
     </p>
     <button type="button" id={id} className="mission-button leave"> Leave mission</button>
   </div>
-);
+)};
 
 MissionSkeleton.propTypes = {
   name: Proptypes.string.isRequired,
