@@ -32,9 +32,14 @@ const missionReducer = (state = initialState, action) => {
 const LoadMissions = createAsyncThunk(
     LOAD_MISSIONS,
     async () => await axios.get(url),
-)
+);
 
 const JoinMissions = (id) => ({
     type: JOIN_MISSIONS,
     payload: id,
-})
+});
+
+const LeaveMission = (id) => ({
+    type: LEAVE_MISSIONS,
+    payload: id,
+});
