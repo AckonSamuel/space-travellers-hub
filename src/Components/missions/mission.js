@@ -23,11 +23,10 @@ const Mission = () =>{
     </div>
     <div className="mission-container>">
      { missions.map((mission) => (<MissionSkeleton
-      key={mission.id}
-      name={mission.name}
+      key={mission.mission_id}
+      name={mission.mission_name}
       description={mission.description}
-      status={mission.reserved}
-      id={mission.id} />))}
+      id={mission.mission_id} />))}
     </div>
   </section>
 )};

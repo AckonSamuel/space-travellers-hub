@@ -2,7 +2,7 @@ import React from 'react';
 import Proptypes from 'prop-types';
 import './missions.css';
 
-const MissionSkeleton = ({name, description, status, id}) => (
+const MissionSkeleton = ({name, description, id}) => (
   <div className="mission-table">
     <h2>{name}</h2>
     <p className="mission-description">
@@ -18,7 +18,6 @@ const MissionSkeleton = ({name, description, status, id}) => (
 MissionSkeleton.propTypes = {
     name: Proptypes.string.isRequired,
     description: Proptypes.string.isRequired,
-    status: Proptypes.bool.isRequired,
     id: Proptypes.string.isRequired,
 }
 
