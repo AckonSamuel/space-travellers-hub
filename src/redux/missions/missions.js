@@ -47,4 +47,9 @@ const LeaveMission = (id) => ({
 const PopulateMissionProfile = (id) => ({
     type: POPULATE_MISSIONS_PROFILE,
     payload: id,
-})
+});
+
+export {
+    LoadMissions, JoinMissions, LeaveMission, PopulateMissionProfile,
+};
+export default missionReducer;
