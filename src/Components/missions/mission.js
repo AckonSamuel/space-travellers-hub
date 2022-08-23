@@ -1,5 +1,6 @@
 import React from 'react';
 import MissionSkeleton from './MissionSkeleton';
+import './missions.css';
 
 const Mission = () => (
   <section className="super-mission">
