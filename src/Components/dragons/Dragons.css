@@ -1,5 +1,5 @@
 .dragon_image {
-  width: 35vw; 
+  width: 35vw;
 }
 
 ul {
@@ -42,7 +42,7 @@ li {
   .dragon_image {
     width: 80vw;
   }
-  
+
   li {
     flex-direction: column;
   }
