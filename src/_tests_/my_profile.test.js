@@ -5,10 +5,10 @@ import store from '../redux/configureStore';
 import Myprofile from '../Components/my_profile/my_profile';
 
 it('Test if my_profile renderers correctly', () => {
-    const tree = renderer.create(
-        <Provider store={store}>
-            <Myprofile />
-        </Provider>,
-    );
-    expect(tree).toMatchSnapshot();
-})
+  const tree = renderer.create(
+    <Provider store={store}>
+      <Myprofile />
+    </Provider>,
+  );
+  expect(tree).toMatchSnapshot();
+});
