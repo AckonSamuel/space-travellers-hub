@@ -53,6 +53,12 @@
   font-size: 1.5em;
 }
 
+.reserve-badge {
+  font-size: 0.8em;
+  font-style: italic;
+  color: #90ee90;
+}
+
 .hide {
   display: none;
 }

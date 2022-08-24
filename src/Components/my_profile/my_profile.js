@@ -8,6 +8,7 @@ const Myprofile = () => {
   const dispatch = useDispatch();
   const missions = useSelector((state) => state.missionReducer);
   const dragons = useSelector(selectAllDragons);
+  const rockets = useSelector((state) => state.rocket);
 
   useEffect(() => {
     dispatch(PopulateMissionProfile());
@@ -29,6 +30,11 @@ const Myprofile = () => {
       </section>
       <section className="my-comp">
         <h2>My Rockets</h2>
+        <ul className="reservedCont">
+          { rockets.map((rocket) => (rocket.reserved ? (
+            <li className="reservedItem" key={rocket.id}>{rocket.rocket_name}</li>
+          ) : null))}
+        </ul>
       </section>
       <section className="my-comp">
         <h2>My Dragons</h2>
