@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux/es/exports';
-import { fetchDragons } from '../../redux/dragons/dragons.redux';
+import { fetchDragons, selectAllDragons } from '../../redux/dragons/dragons.redux';
 import BabyDragon from './BabyDragon';
 
 const Dragon = () => {
-  const dragons = useSelector((state) => state.dragons);
+  const dragons = useSelector(selectAllDragons);
   const dispatch = useDispatch();
   useEffect(() => {
     if (!dragons.length) {
