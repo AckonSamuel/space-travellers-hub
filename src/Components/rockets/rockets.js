@@ -8,7 +8,7 @@ const Rockets = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchRockets);
+    if (!rockets.length) dispatch(fetchRockets);
   }, []);
 
   const handleBooking = (id) => {
@@ -26,7 +26,11 @@ const Rockets = () => {
           <li key={rocket.id} className="rocket-data">
             <img src={rocket.flickr_images[0]} alt="rocket from space X" className="rocket-image" />
             <div className="rocket-details">
-              <h3>{rocket.rocket_name}</h3>
+              <h3>
+                {rocket.rocket_name}
+                {' '}
+                <span className="reserve-badge">{(rocket.reserved ? '(reserved)' : '')}</span>
+              </h3>
               <p>{rocket.description}</p>
               <button type="button" className={`rocket-btn ${rocket.reserved ? 'hide' : ''}`} onClick={() => handleBooking(rocket.id)}>
                 Reservation
