@@ -38,6 +38,20 @@ li {
   letter-spacing: 0.05rem;
 }
 
+.span {
+  padding-right: 5px;
+  color: rgb(31, 163, 215);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.cancel {
+  background-color: white;
+  color: black;
+  border: 1px black solid;
+  width: 230px;
+}
+
 @media screen and (max-width: 700px) {
   .dragon_image {
     width: 80vw;
@@ -45,5 +59,9 @@ li {
 
   li {
     flex-direction: column;
+  }
+
+  .description-container {
+    width: 80vw;
   }
 }

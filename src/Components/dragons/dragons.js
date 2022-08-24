@@ -6,9 +6,10 @@ import BabyDragon from './BabyDragon';
 const Dragon = () => {
   const dragons = useSelector((state) => state.dragons);
   const dispatch = useDispatch();
-
   useEffect(() => {
-    dispatch(fetchDragons());
+    if (!dragons.length) {
+      dispatch(fetchDragons());
+    }
   }, []);
 
   return (
@@ -23,6 +24,7 @@ const Dragon = () => {
             type={dragon.type}
             description={dragon.description}
             image={dragon.flickr_images[0]}
+            reserved={dragon.reserved}
           />
         ))}
       </ul>
