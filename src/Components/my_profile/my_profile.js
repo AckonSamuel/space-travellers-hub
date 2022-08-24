@@ -2,10 +2,12 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './my_profile.css';
 import { PopulateMissionProfile } from '../../redux/missions/missions';
+import { selectAllDragons } from '../../redux/dragons/dragons.redux';
 
 const Myprofile = () => {
   const dispatch = useDispatch();
   const missions = useSelector((state) => state.missionReducer);
+  const dragons = useSelector(selectAllDragons);
   const rockets = useSelector((state) => state.rocket);
 
   useEffect(() => {
@@ -36,6 +38,15 @@ const Myprofile = () => {
       </section>
       <section className="my-comp">
         <h2>My Dragons</h2>
+        <ul className="reservedCont">
+          { dragons.map((dragon) => (dragon.reserved === true ? (
+            <li className="reservedItem" key={dragon.id}>
+              {' '}
+              {dragon.name}
+              {' '}
+            </li>
+          ) : null))}
+        </ul>
       </section>
     </div>
   );

@@ -74,4 +74,6 @@ export const cancelReservation = (id) => ({
   payload: id,
 });
 
+export const selectAllDragons = (state) => state.dragons;
+
 export default dragonsReducer;
