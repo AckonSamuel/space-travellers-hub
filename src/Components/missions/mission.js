@@ -1,15 +1,14 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector, shallowEqual } from 'react-redux';
-import MissionSkeleton from './MissionSkeleton';
+import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 import { LoadMissions } from '../../redux/missions/missions';
+import MissionSkeleton from './MissionSkeleton';
 import './missions.css';
 
 const Mission = () => {
-  const missions = useSelector((state) => state.missionReducer, shallowEqual);
   const dispatch = useDispatch();
+  const missions = useSelector((state) => state.missionReducer, shallowEqual);
   useEffect(() => {
-    // if (document.querySelector('.mission-container').children.length === 0)
-    dispatch(LoadMissions());
+    if (missions.length === 0) { dispatch(LoadMissions()); }
   }, []);
 
   return (
@@ -20,16 +19,17 @@ const Mission = () => {
         <p className="status">Status</p>
         <p className="join">Join</p>
       </div>
-      <div className="mission-container>">
+      <ul className="mission-container>">
         { missions.map((mission) => (
           <MissionSkeleton
             key={mission.mission_id}
             name={mission.mission_name}
             description={mission.description}
             id={mission.mission_id}
+            status={mission.reserved}
           />
         ))}
-      </div>
+      </ul>
     </section>
   );
 };
