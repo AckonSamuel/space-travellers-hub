@@ -13,7 +13,7 @@ const Myprofile = () => {
 
   return (
     <div className="myProfile">
-      <section className="my-rockets">
+      <section className="my-comp">
         <h2>My Mission</h2>
         <ul className="reservedCont">
           { missions.map((mission) => (mission.reserved === true ? (
@@ -25,10 +25,10 @@ const Myprofile = () => {
           ) : null))}
         </ul>
       </section>
-      <section className="my-rockets">
+      <section className="my-comp">
         <h2>My Rockets</h2>
       </section>
-      <section className="my-rockets">
+      <section className="my-comp">
         <h2>My Dragons</h2>
       </section>
     </div>
