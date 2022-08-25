@@ -11,7 +11,11 @@
 - Library/Framework: Reactjs | Redux | Jest 
 
 ## Live Demo
-[Live Demo Link]
+[Live Demo Link](https://famous-klepon-e50d82.netlify.app/)
+
+
+## Preview
+![space](https://user-images.githubusercontent.com/40690789/186649568-72c0c4f7-e899-40a9-8056-e20f1c258645.png)
 
 ## Getting started
 
