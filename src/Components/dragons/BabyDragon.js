@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { addReservation, cancelReservation } from '../../redux/dragons/dragons.redux';
-import './Dragons.css';
+import './dragons.css';
 
 const BabyDragon = ({
   name, type, description, image, reserved, id,
