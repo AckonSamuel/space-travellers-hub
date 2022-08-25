@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Header from './Components/Header/Header.js';
-import Rockets from './Components/rockets/Rockets.js';
-import Mission from './Components/missions/Mission.js';
-import Dragon from './Components/dragons/Dragons.js';
-import MyProfile from './Components/my_profile/My_profile.js';
+import Header from './Components/Header/Header';
+import Rockets from './Components/rockets/Rockets';
+import Mission from './Components/missions/Mission';
+import Dragon from './Components/dragons/Dragons';
+import MyProfile from './Components/my_profile/My_profile';
 
 function App() {
   return (
