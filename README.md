@@ -15,15 +15,24 @@
 
 ## Getting started
 
-#### Pass the following commands to the terminal: 
-        npx create-react-app my-app
-        cd my-app
-        npm start
-
 #### Clone this repository
 
 ```bash
 $ git clone https://github.com/AckonSamuel/space-travellers-hub.git
+```
+
+#### cd into directory
+```
+$ cd <relative-path>/space-travellers-hub/
+```
+
+#### install dependencies
+``` run 
+$ npm i
+```
+#### run project
+```
+$ npm start
 ```
 
 ## Authors
@@ -31,17 +40,18 @@ $ git clone https://github.com/AckonSamuel/space-travellers-hub.git
 👤 **Tracey Kadenyi**
 
 - GitHub: [@TracK92](https://github.com/TracK92)
-- LinkedIn: [Tracey Kadenyi](https://www.linkedin.com/in/tracy-kadenyi-9bb90287)
+- LinkedIn: [Tracey Kadenyi](https://www.linkedin.com/in/tracey-kadenyi/)
 
 👤 **Tushar Singh**
 
 - GitHub: [@PinkMoon25](https://github.com/PinkMoon25/)
 - Twitter: [@twitterhandle](https://twitter.com/TusharS90674484)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/tushar-singh-6b063a14b/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/meet-tushar-singh/)
 
 👤 **Ackon Samuel**
 - GitHub: [@AckonSamuel](https://github.com/AckonSamuel/)
 - Twitter: [@AckonSamuel2](https://twitter.com/AckonSamuel2)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/samuel-yaw-ackon/)
 
 👤
 ## 🤝 Contributing
