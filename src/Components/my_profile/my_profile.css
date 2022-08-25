@@ -10,12 +10,18 @@
 }
 
 .my-comp ul {
-  display: block;
-  border: 1px solid #aaa;
+  border: 2px solid #6495ed;
 }
 
 .my-comp ul li {
   list-style-type: none;
   padding: 20px 20px;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 2px solid #6495ed;
+  font-size: 1.5em;
+}
+
+.my-comp > p {
+  font-size: 1.5em;
+  border: 2px solid #6495ed;
+  padding: 20px;
 }
