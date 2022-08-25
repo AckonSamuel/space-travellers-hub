@@ -1,0 +1,33 @@
+.logo {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header_logo {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+
+nav {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.active {
+  text-decoration: underline;
+}

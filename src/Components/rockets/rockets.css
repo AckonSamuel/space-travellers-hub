@@ -1,0 +1,64 @@
+
+.rockets-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.rocket-data {
+  list-style-type: none;
+  padding: 24px 36px;
+  display: flex;
+  gap: 22px;
+}
+
+.rocket-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.rocket-details > * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.rocket-image {
+  width: 35vw;
+}
+
+.rocket-btn {
+  max-width: max-content;
+  padding: 5px 10px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: #6495ed;
+}
+
+.close {
+  border: 2px solid;
+  color: #6495ed;
+  background-color: #fff;
+}
+
+.rocket-details > p {
+  line-height: 28px;
+}
+
+.rocket-details > h3 {
+  font-size: 1.5em;
+}
+
+.reserve-badge {
+  font-size: 0.8em;
+  font-style: italic;
+  color: #90ee90;
+}
+
+.hide {
+  display: none;
+}
