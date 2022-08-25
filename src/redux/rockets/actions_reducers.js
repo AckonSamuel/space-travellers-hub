@@ -8,7 +8,7 @@ const fetchRockets = async (dispatch) => {
     const response = await fetch(rocketApi).then((res) => res.json());
     dispatch({ type: FETCH_ROCKETS, payload: response });
   } catch (error) {
-    console.log(error);
+    console.log(error); // eslint-disable-line 
   }
 };
 
